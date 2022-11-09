@@ -7,7 +7,9 @@ const symbols = {
   GROUND_FLOOR: 'G',
   FIRST_FLOOR: '1',
   SECOND_FLOOR: '2',
-  THIRD_FLOOR: '3'
+  THIRD_FLOOR: '3',
+  FOURTH_FLOOR: '4',
+  FIFTH_FLOOR: '5'
   // ... and so on ...
 };
 
@@ -21,6 +23,8 @@ const proto = {
       case symbols.FIRST_FLOOR:    return 2;
       case symbols.SECOND_FLOOR:   return 3;
       case symbols.THIRD_FLOOR:    return 4;
+      case symbols.FOURTH_FLOOR:    return 5;
+      case symbols.FIFTH_FLOOR:    return 6;
       default: return -1;
     }
   },

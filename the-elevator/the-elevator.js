@@ -19,12 +19,15 @@ document.addEventListener(
 
     // an internal panel (inside the elevator)
     const internalPanel = new Panel([
+      new LightButton(Action.FIFTH_FLOOR),
+      new LightButton(Action.FOURTH_FLOOR),
       new LightButton(Action.THIRD_FLOOR),
       new LightButton(Action.SECOND_FLOOR),
       new LightButton(Action.FIRST_FLOOR),
       new LightButton(Action.GROUND_FLOOR),
       new LightButton(Action.BASEMENT_FLOOR),
-      new LightButton(Action.OPEN_DOORS), new LightButton(Action.CLOSE_DOORS),
+      new LightButton(Action.OPEN_DOORS), 
+      new LightButton(Action.CLOSE_DOORS),
       new LightButton(Action.ALARM)
     ]);
 
@@ -34,11 +37,13 @@ document.addEventListener(
       // is mandatory at index 0 (to simplify the demo)
       internalPanel,
       // then we have at least a panel per floor
+      new Panel([new LightButton(Action.FIFTH_FLOOR)]),
+      new Panel([new LightButton(Action.FOURTH_FLOOR)]),
       new Panel([new LightButton(Action.THIRD_FLOOR)]),
       new Panel([new LightButton(Action.SECOND_FLOOR)]),
       new Panel([new LightButton(Action.FIRST_FLOOR)]),
       new Panel([new LightButton(Action.GROUND_FLOOR)]),
-      new Panel([new LightButton(Action.BASEMENT_FLOOR)])
+      new Panel([new LightButton(Action.BASEMENT_FLOOR)]),
     ];
 
     // the controller handles an elevator too

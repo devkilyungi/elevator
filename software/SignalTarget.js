@@ -13,7 +13,6 @@ export default class SignalTarget extends EventTarget {
   }
 
   // a way to handle events that does not need bindings all over
-  // https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38
   handleEvent(event) { this[`on${event.type}`](event); }
 
   // and a mechanical "signal" to notify any hardware
